@@ -10,7 +10,7 @@ def titanic(Sex:int,Age:float,Lifeboat:int,Pclass:int):
         print(pred)
         titanic = pickle.load(fid)
         answer = bool(titanic.predict(pred))
-        m = "Azar,Você não morreria no titanic :("
+        m = "Azar, você morreria no titanic :("
         if answer: 
             m = "Parabéns você sobreviveria ao titanic!"
         status_code = status.HTTP_200_CREATED
