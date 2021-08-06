@@ -10,10 +10,10 @@ def titanic(Sex:int,Age:float,Lifeboat:int,Pclass:int):
         print(pred)
         titanic = pickle.load(fid)
         answer = bool(titanic.predict(pred))
-        m = "Azar, você morreria no titanic :("
+        m = "Que pena, você morreria no titanic :("
         if answer: 
             m = "Parabéns você sobreviveria ao titanic!"
-        status_code = status.HTTP_200_CREATED
+        status_code = status.HTTP_200_OK
     return {"survived": answer,"status": status_code,"message": m}
 
 @app.get('/model')
